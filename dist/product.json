@@ -1,0 +1,9 @@
+{
+  "name": "Boys' Breaker Pants",
+  "ratings": 4,
+  "reviews": 74,
+  "images": ["product-image-1.jpg", "product-image-2.jpg", "product-image-3.jpg","product-image-4.jpg"],
+  "price": 52.00,
+  "colors": ["vineyard navy", "stone", "khaki", "red"],
+  "sizes": ["2T", "3T", "4T", 5, 6, 7, "S", "M", "L", "XL"]
+}
