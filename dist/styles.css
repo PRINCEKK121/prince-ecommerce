@@ -1,22 +1,324 @@
 /******************
- google fonts 
+  google fonts 
  ******************/
- @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;700&display=swap');
 
- /************************************ 
- removing all the margins and paddings 
+/************************************ 
+  removing all the margins and paddings 
  *************************************/
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
+/*********************
+  css variables
+**********************/
+:root {
+  --header-color: #bbb;
+  --primary-color: #002b5c;
+  --secondary-color: #1176bb;
+}
+
 /***************************
-basic selectors
+  basic selectors
 ****************************/
 html {
   font-size: 62.5%;
-  font-family: 'Nunito Sans';
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+main {
+  margin: 0.2rem;
+  text-align: center;
+}
+
+/**************************
+  header section
+***************************/
+header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 5rem;
+  border-bottom: 0.1rem solid var(--header-color);
+  box-shadow: 0 0.1rem 0 rgba(0, 0, 0, 0.06);
+}
+
+header a {
+  margin-right: 1rem;
+  text-decoration: none;
+  font-size: 2rem;
+  color: var(--header-color);
+}
+
+a .fa-shopping-bag {
+  color: #002b5c;
+}
+
+/******************
+ main section 
+ *******************/
+main nav {
+  margin: 2.5rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+main nav a {
+  text-decoration: none;
+  font-size: 1.3rem;
+  margin-right: 1rem;
+  color: var(--primary-color);
+  font-weight: 200;
+}
+
+main nav a:hover {
+  text-decoration: underline;
+}
+
+.fas.fa-angle-right {
+  margin-left: 1rem;
+}
+
+/**********************
+  product details intro
+***********************/
+#product-details-intro > * {
+  margin-bottom: 1.5rem;
+}
+
+#product-details-intro h1 {
+  font-size: 3rem;
+}
+
+#product-details-intro p {
+  font-size: 1.5rem;
+}
+
+.fa-star {
+  color: var(--secondary-color);
+}
+
+#product-details-intro figure {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+#product-details-intro figure img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/*********************************
+  product details body
+***********************************/
+#product-details-body {
+  font-size: 1.2rem;
+}
+
+.discount-info {
+  font-size: 1.3rem;
+  font-weight: 300;
+}
+
+.discount-info span {
+  text-transform: uppercase;
+  color: #d6387a;
+  font-weight: 700;
+}
+
+.price {
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 1rem 0;
+}
+
+.color-choice p,
+.size-choice {
+  font-weight: 700;
+}
+
+.color-choice {
+  margin-bottom: 1.5rem;
+}
+
+form {
+  margin: 2rem 0;
+}
+
+.btn,
+input[type='number'] {
+  outline: none;
+  font-size: 1.5rem;
+  background: none;
+  font-weight: 300;
+  border: 0.1rem solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.btn {
+  display: inline-block;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-weight: 200;
+  border-radius: 50%;
+}
+
+.btn:hover,
+.btn:focus {
+  box-shadow: 0.1rem 0.1rem 0.5rem var(--secondary-color);
+}
+
+/* remove arrows/spinners */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+.user-input input[type='number'] {
+  display: inline-block;
+  margin: 0 0.7rem;
+  width: 5rem;
+  height: 3rem;
+  text-align: center;
+  transition: border 0.1s, border-radius 0.1s;
+}
+
+.user-input input[type='number']:focus {
+  border: 0.2rem solid #313030;
+  border-radius: 0.2rem;
+}
+
+.add-to-cart {
+  margin: 3rem 0;
+  font-size: 1.6rem;
+}
+
+.btn-block,
+.buy-online {
+  outline: none;
+  border: none;
+  display: inline-block;
+  width: 70%;
+  cursor: pointer;
+  height: 6.4rem;
+  font-size: inherit;
+}
+
+.btn-block {
+  text-transform: uppercase;
+  background-color: var(--primary-color);
+  color: #fff;
+  font-weight: 700;
+}
+
+.buy-online {
+  margin-top: 0.5rem;
+  border: 0.1rem solid var(--primary-color);
+}
+
+.buy-online {
+  margin: 0.5rem auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.buy-online .in-store {
+  font-weight: 700;
+}
+
+.buy-online .near-store {
+  font-size: 1.4rem;
+}
+
+.buy-online .choose-store,
+.shipping a {
+  text-decoration: underline;
+  color: var(--secondary-color);
+}
+
+/**************************
+  payment details
+***************************/
+#payment-options {
+  font-size: 1.4rem;
+  color: var(--primary-color);
+}
+
+.shipping span {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.payment-card {
+  margin-top: 2.5rem;
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+}
+
+.img-container img {
+  height: 2rem;
+  margin-right: 0.5rem;  
+}
+
+.pay-installments {
+  display: flex;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+}
+
+.pay-installments img {
+  position: relative;
+  top: 0.5rem;
+  height: 1.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.3rem;
+}
+
+.pay-installments a {
+  text-decoration: none;
+}
+
+/****************************
+  gift section
+****************************/
+.gift {
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.gift i:first-child {
+  margin-right: 0.2rem;
+}
+
+.gift a:first-child:hover {
+  text-decoration: underline;
+}
+
+.gift a {
+  color: var(--primary-color);
+  text-decoration: none;
+  margin-right: 5rem;
 }

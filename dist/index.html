@@ -11,33 +11,39 @@
       href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
     />
 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
 
     <title>Document</title>
   </head>
   <body>
     <header>
-      <span class="cart-count"> <i class="fas fa-shopping-bag"></i> (0) </span>
+      <a href="cart.html"
+        ><span class="cart-count">
+          <i class="fas fa-shopping-bag"></i> (0)
+        </span></a
+      >
     </header>
 
     <main>
       <nav>
-        <a href="#">Home</a>
-        <a href="#">Sale</a>
-        <a href="#">Kids</a>
-        <a href="#">Boys</a>
+        <a href="#">Home <i class="fas fa-angle-right"></i></a>
+        <a href="#">Sale <i class="fas fa-angle-right"></i></a>
+        <a href="#">Kids <i class="fas fa-angle-right"></i></a>
+        <a href="#">Boys <i class="fas fa-angle-right"></i></a>
       </nav>
 
       <section id="product-details-intro">
         <h1>Boys' Breaker Pants</h1>
-        <i class="fas fa-star"></i> 74 Reviews
+        <p><i class="fas fa-star"></i> 74 Reviews</p>
         <figure>
-          <img src="images/product-image-1.jpg" alt="images of products">
+          <img src="images/product-image-4.jpg" alt="images of products" />
         </figure>
       </section>
 
       <section id="product-details-body">
-        <p class="discount-info"><span>Free Ground Shipping</span> on all orders over $125</p>
+        <p class="discount-info">
+          <span>Free Ground Shipping</span> on all orders over $125
+        </p>
 
         <div class="product-details">
           <p class="price">$52.00</p>
@@ -52,50 +58,68 @@
             </div>
           </div>
 
-          <div class="quantity">
-            <form>
-              <div class="user-input">
-                <button class="decrease-quantity">-</button>
-                <input type="number">
-                <button class="increase-quantity">+</button>
-              </div>
+          <form>
+            <div class="user-input">
+              <button class="btn decrease-quantity">
+                <i class="fas fa-minus"></i>
+              </button>
+              <input type="number" />
+              <button class="btn increase-quantity">
+                <i class="fas fa-plus"></i>
+              </button>
+            </div>
 
-              <div class="add-to-cart">
-                <button class="add-to-cart-btn">Add to Bag</button>
-                <p class="buy-online">
-                  <a href="#">
-                    <span class="in-store">Buy online, free in-store pickup</span>
-                    <span class="near-store">
-                      Get it today at a store near you. <a href="#">Choose store</a>
-                    </span>
-                  </a>
-                </p>
-              </div>
-            </form>
-          </div>
+            <div class="add-to-cart">
+              <button type="submit" class="btn-block add-to-cart-btn">
+                Add to Bag
+              </button>
+
+                <a class="buy-online" href="#">
+                  <span class="in-store">
+                    Buy online, free in-store pickup
+                  </span>
+                  <span class="near-store">
+                    Get it today at a store near you.
+                    <span class="choose-store">Choose store</span>
+                  </span>
+                </a>
+            </div>
+          </form>
         </div>
       </section>
 
-      <section class="payment-options">
-        <span class="shipping"><i class="fas fa-truck-moving"></i> Same Day Delivery - <a href="#">Check Availability</a></span>
+      <section id="payment-options">
+        <span class="shipping">
+          <i class="fas fa-truck-moving"></i> 
+            <span>Same Day Delivery</span> -
+          <a href="#">Check Availability</a>
+          </span>
 
-        <div class="paymemnt-card">
+        <div class="payment-card">
           <figure class="img-container">
-            <img src="images/pay-paypal.png" alt="paypal pic"><img src="images/pay-amazon.png" alt="amazon pic"><img src="images/pay-applepay.png" alt="apple pic">
+            <img src="images/pay-paypal.png" alt="paypal pic" />
+            <img
+              src="images/pay-amazon.png"
+              alt="amazon pic"
+            />
+            <img src="images/pay-applepay.png" alt="apple pic" />
           </figure>
 
-          <p class="pay-installments">or 4 payments of $13.00 by <img src="images/afterpay-lockup-blackonwhite.svg" alt="afterpay logo "> <a href="#">?</a></p>
+          <p class="pay-installments">
+            or 4 payments of $13.00 by
+            <img
+              src="images/afterpay-lockup-blackonwhite.svg"
+              alt="afterpay logo "
+            />
+            <a href="#">?</a>
+          </p>
         </div>
       </section>
 
       <section class="gift">
-        <a href="#">
-          <i class="fas fa-gift"></i> Gift Options
-        </a>
+        <a href="#"> <i class="fas fa-gift"></i> Gift Options </a>
 
-        <a href="#">
-          <i class="far fa-heart"></i> Add to Wishlist
-        </a>
+        <a href="#"> <i class="far fa-heart"></i> Add to Wishlist </a>
       </section>
     </main>
   </body>
