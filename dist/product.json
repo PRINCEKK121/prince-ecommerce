@@ -1,9 +1,28 @@
-{
-  "name": "Boys' Breaker Pants",
-  "ratings": 4,
-  "reviews": 74,
-  "images": ["product-image-1.jpg", "product-image-2.jpg", "product-image-3.jpg","product-image-4.jpg"],
-  "price": 52.00,
-  "colors": ["vineyard navy", "stone", "khaki", "red"],
-  "sizes": ["2T", "3T", "4T", 5, 6, 7, "S", "M", "L", "XL"]
-}
+[
+  {
+    "name": "Boys' Breaker Pants",
+    "ratings": 4,
+    "numOfReviews": 74,
+    "images": ["product-image-1.jpg", "product-image-2.jpg", "product-image-3.jpg","product-image-4.jpg"],
+    "price": 52.00,
+    "colors": [
+        {
+          "name": "vineyard navy",
+          "hex": "#D8D5CE"
+        },
+        {
+          "name": "stone",
+          "hex": "#AD9C94"
+        }, 
+        {
+        "name": "khaki",
+        "hex": "#222439"
+        },
+        { 
+        "name": "jetty red",
+        "hex": "#E67675"
+        }
+      ],
+    "sizes": ["2T", "3T", "4T", 5, 6, 7, "S", "M", "L", "XL"]
+  }
+]

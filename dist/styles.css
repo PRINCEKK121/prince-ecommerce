@@ -100,6 +100,12 @@ main nav a:hover {
   font-size: 1.5rem;
 }
 
+.ratingsContainer {
+  letter-spacing: 0.5rem;
+  display: inline-block;
+  margin-right: 1.5rem;
+}
+
 .fa-star {
   color: var(--secondary-color);
 }
