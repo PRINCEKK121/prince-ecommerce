@@ -154,6 +154,40 @@ main nav a:hover {
   margin-bottom: 1.5rem;
 }
 
+.text {
+  display: block;
+}
+
+.color-choice .colors,
+.size-choice .sizes {
+  display: inline-block;
+  cursor: pointer;
+  margin-right: 0.5rem;
+}
+
+.color-choice .colors {
+  border-radius: 50%;
+  height: 3rem;
+  width: 3rem;
+}
+
+.size-choice {
+  width: 70%;
+  margin:auto;
+}
+.size-choice .sizes {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  padding: 1.5rem;
+  color: #717171;
+  background: #f7f7f7;
+}
+
+.size-choice .sizes:hover {
+  color: #fff;
+  background: var(--secondary-color);
+}
+
 form {
   margin: 2rem 0;
 }

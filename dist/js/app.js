@@ -8,6 +8,7 @@ window.addEventListener('DOMContentLoaded', () => {
       const data = JSON.parse(xhr.responseText);
 
       generateProductIntro(data[0]);
+      generateProductDetails(data[0]);
     }
   };
 
