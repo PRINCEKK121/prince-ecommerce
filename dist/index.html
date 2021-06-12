@@ -31,12 +31,12 @@
         <a href="#">Kids <i class="fas fa-angle-right"></i></a>
         <a href="#">Boys <i class="fas fa-angle-right"></i></a>
       </nav>
-      
+
       <section id="product-details-intro">
         <h1></h1>
         <p></p>
         <figure>
-          <img src="images/product-image-4.jpg" alt="images of products" />
+          <img src="images/product-image-1.jpg" alt="images of products" />
         </figure>
       </section>
 
@@ -49,12 +49,10 @@
           <p class="price"></p>
 
           <div class="user-choice">
-            <div class="color-choice">
-              <span class="text">Color:</span>
-            </div>
+            <div class="color-choice"></div>
 
             <div class="size-choice">
-              <span class="text">Size:</span> 
+              <span class="text">Size:</span>
             </div>
           </div>
 
@@ -63,7 +61,7 @@
               <button class="btn decrease-quantity">
                 <i class="fas fa-minus"></i>
               </button>
-              <input type="number" />
+              <input type="number" value="1"/>
               <button class="btn increase-quantity">
                 <i class="fas fa-plus"></i>
               </button>
@@ -74,15 +72,13 @@
                 Add to Bag
               </button>
 
-                <a class="buy-online" href="#">
-                  <span class="in-store">
-                    Buy online, free in-store pickup
-                  </span>
-                  <span class="near-store">
-                    Get it today at a store near you.
-                    <span class="choose-store">Choose store</span>
-                  </span>
-                </a>
+              <a class="buy-online" href="/">
+                <span class="in-store"> Buy online, free in-store pickup </span>
+                <span class="near-store">
+                  Get it today at a store near you.
+                  <span class="choose-store">Choose store</span>
+                </span>
+              </a>
             </div>
           </form>
         </div>
@@ -90,18 +86,15 @@
 
       <section id="payment-options">
         <span class="shipping">
-          <i class="fas fa-truck-moving"></i> 
-            <span>Same Day Delivery</span> -
+          <i class="fas fa-truck-moving"></i>
+          <span>Same Day Delivery</span> -
           <a href="#">Check Availability</a>
-          </span>
+        </span>
 
         <div class="payment-card">
           <figure class="img-container">
             <img src="images/pay-paypal.png" alt="paypal pic" />
-            <img
-              src="images/pay-amazon.png"
-              alt="amazon pic"
-            />
+            <img src="images/pay-amazon.png" alt="amazon pic" />
             <img src="images/pay-applepay.png" alt="apple pic" />
           </figure>
 
@@ -123,8 +116,9 @@
       </section>
     </main>
 
-    <script src="js/querySelector.js"></script>
     <script src="js/app.js"></script>
-    <script src="js/entry.js"></script>
+    <script src="js/querySelector.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/events.js"></script>
   </body>
 </html>

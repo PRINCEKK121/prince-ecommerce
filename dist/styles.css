@@ -71,7 +71,7 @@ main nav {
 
 main nav a {
   text-decoration: none;
-  font-size: 1.3rem;
+  font-size: 1.7rem;
   margin-right: 1rem;
   color: var(--primary-color);
   font-weight: 200;
@@ -145,7 +145,7 @@ main nav a:hover {
   margin: 1rem 0;
 }
 
-.color-choice p,
+.color-choice,
 .size-choice {
   font-weight: 700;
 }
@@ -154,22 +154,33 @@ main nav a:hover {
   margin-bottom: 1.5rem;
 }
 
+.color-item {
+  display: inline-block;
+}
+
+.color-item .colors {
+  display: inline-block;
+  cursor: pointer;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+
+.selected-color {
+  border: 0.3rem solid var(--primary-color);
+}
+
 .text {
+  margin-bottom: 1rem;
   display: block;
 }
 
-.color-choice .colors,
 .size-choice .sizes {
   display: inline-block;
   cursor: pointer;
   margin-right: 0.5rem;
 }
 
-.color-choice .colors {
-  border-radius: 50%;
-  height: 3rem;
-  width: 3rem;
-}
 
 .size-choice {
   width: 70%;
@@ -186,6 +197,11 @@ main nav a:hover {
 .size-choice .sizes:hover {
   color: #fff;
   background: var(--secondary-color);
+}
+.size-choice .sizes.selected-size {
+  transition: none;
+  background: var(--primary-color);
+  color: #fff;
 }
 
 form {
@@ -230,14 +246,15 @@ input[type='number'] {
 .user-input input[type='number'] {
   display: inline-block;
   margin: 0 0.7rem;
+  font-size: 2rem;
   width: 5rem;
-  height: 3rem;
+  height: 4rem;
   text-align: center;
   transition: border 0.1s, border-radius 0.1s;
 }
 
 .user-input input[type='number']:focus {
-  border: 0.2rem solid #313030;
+  border: 0.2rem solid #ebb224;
   border-radius: 0.2rem;
 }
 
@@ -251,7 +268,7 @@ input[type='number'] {
   outline: none;
   border: none;
   display: inline-block;
-  width: 70%;
+  width: 90%;
   cursor: pointer;
   height: 6.4rem;
   font-size: inherit;
@@ -267,9 +284,6 @@ input[type='number'] {
 .buy-online {
   margin-top: 0.5rem;
   border: 0.1rem solid var(--primary-color);
-}
-
-.buy-online {
   margin: 0.5rem auto;
   padding: 1rem;
   display: flex;
