@@ -16,6 +16,8 @@ const domSelectors = () => {
     numberInput: document.querySelector('input[type="number"]'),
     // colorText: userChoices.querySelector('.color-choice .text'),
     sizeText: document.querySelector('.size-choice .text'),
+    notify: document.querySelector('.notify-user'),
+    addToCartBtn: document.querySelector('.add-to-cart-btn'),
     buttons: document.querySelectorAll('.btn')
   };
 };

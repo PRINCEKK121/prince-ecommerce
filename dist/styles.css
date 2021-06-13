@@ -181,10 +181,9 @@ main nav a:hover {
   margin-right: 0.5rem;
 }
 
-
 .size-choice {
   width: 70%;
-  margin:auto;
+  margin: auto;
 }
 .size-choice .sizes {
   margin-bottom: 1rem;
@@ -256,6 +255,10 @@ input[type='number'] {
 .user-input input[type='number']:focus {
   border: 0.2rem solid #ebb224;
   border-radius: 0.2rem;
+}
+
+.user-input i {
+  display: block;
 }
 
 .add-to-cart {
@@ -331,7 +334,7 @@ input[type='number'] {
 
 .img-container img {
   height: 2rem;
-  margin-right: 0.5rem;  
+  margin-right: 0.5rem;
 }
 
 .pay-installments {
@@ -375,4 +378,25 @@ input[type='number'] {
   color: var(--primary-color);
   text-decoration: none;
   margin-right: 5rem;
+}
+
+/******************
+  notification
+*******************/
+.notify-user {
+  width: 25rem;
+  position: fixed;
+  top: 1rem;
+  right: -25rem;
+  background-color: #dd3535;
+  color: #fff;
+  padding: 2rem ;
+  text-align: left;
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+  transition: right 300ms ease-in-out;
+}
+
+.notify-user.show {
+  right: 2rem;
 }
