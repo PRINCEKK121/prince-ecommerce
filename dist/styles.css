@@ -459,16 +459,6 @@ input[type='number'] {
   border-bottom: 0.1rem solid #ccc;
 }
 
-.mini-cart .img {
-  border-radius: 0.5rem;
-  width: 60%;
-  /* background-image: url('images/product-image-1.jpg'); */
-  background-repeat:;
-  background-size: cover;
-  margin-right: 2rem;
-  background-position: center center;
-}
-
 .mini-cart .wrapper {
   font-size: 2rem;
   display: flex;
