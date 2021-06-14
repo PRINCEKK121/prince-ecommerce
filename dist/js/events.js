@@ -17,8 +17,6 @@ form.addEventListener('submit', (e) => {
 
 buyOnline.addEventListener('click', (e) => {
   e.preventDefault();
-
-  
 });
 
 numberInput.addEventListener('keyup', () => {
@@ -32,4 +30,4 @@ buttons.forEach((button) =>
   button.addEventListener('click', changeInputValueWithBtns)
 );
 
-addToCartBtn.addEventListener('click', notifyUser);
+document.querySelector('.close-cart').addEventListener('click', hideOverlayAndMiniCart);

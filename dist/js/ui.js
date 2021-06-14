@@ -1,15 +1,30 @@
+const shoppingList = localStorage.getItem('userData')
+  ? JSON.parse(localStorage.getItem('userData'))
+  : [];
+
 const {
+  productDetailsIntro,
   productName,
   prodRatings,
   prodPrice,
   colorChoices,
   sizeChoices,
   notify,
+  cartCount,
+  itemColor,
+  itemImage,
+  itemName,
+  itemPrice,
+  itemQuantity,
+  itemSize,
+  itemTotalPrice,
 } = domSelectors();
 
 const removeNotification = () => notify.classList.remove('show');
 
 const generateProductIntro = ({ name, ratings, numOfReviews }) => {
+  cartCount.textContent = `(${shoppingList.length})`;
+
   let ratingsSection = '<span class="ratingsContainer">';
 
   productName.textContent = name;
@@ -74,7 +89,11 @@ const userSelections = (e) => {
     classList.add('selected-color');
 
     // Updating the selected color text
-    chooseColor.querySelector('.text').textContent = `Color: ${dataset.color}`;
+    chooseColor.querySelector('.text').textContent = `Color: ${dataset.color.replace('_', ' ')}`;
+
+    // changing the image displayed
+    productDetailsIntro.querySelector('img').src = `${location.origin}/dist/images/${dataset.color}.jpg`;
+    // displayImage.src(`images/${dataset.color}`)
   } else if (className === 'sizes') {
     chooseSize
       .querySelector('.selected-size')
@@ -97,8 +116,7 @@ const changeInputValueWithBtns = (e) => {
     if (e.target.classList.contains('fa-plus')) {
       ++value;
       value = value > 8 ? 9 : value;
-    }
-    else if (e.target.classList.contains('fa-minus')) {
+    } else if (e.target.classList.contains('fa-minus')) {
       --value;
 
       value = value < 1 ? 1 : value;
@@ -109,8 +127,41 @@ const changeInputValueWithBtns = (e) => {
 };
 
 const submitData = () => {
+  const color = document.querySelector('.selected-color').dataset.color;
+  const price = Number(prodPrice.textContent.split('$')[1]);
 
-}
+  const data = {
+    img: color,
+    price,
+    name: productName.textContent,
+    colorSelected: color,
+    sizeSelected: document.querySelector('.selected-size').textContent,
+    qty: Number(numberInput.value),
+  };
+
+  shoppingList.push(data);
+  populateMiniCart(data);
+  localStorage.setItem('userData', JSON.stringify(shoppingList));
+};
+
+const populateMiniCart = ({
+  name,
+  img,
+  price,
+  colorSelected,
+  sizeSelected,
+  qty,
+}) => {
+  
+  itemImage.setAttribute("style", 
+    `background: url(images/${img}.jpg) no-repeat center center/cover; margin-right: 2rem; border-radius: 0.5rem;`);
+  name.textContent = itemName;
+  itemColor.textContent = `${colorSelected} /`;
+  itemSize.textContent = sizeSelected;
+  itemQuantity.textContent = qty;
+  itemPrice.textContent = `$ ${price.toFixed(2)}`;
+  itemTotalPrice.textContent = `$ ${(qty * price).toFixed(2)}`;
+};
 
 const notifyUser = () => {
   const selectedColor = document.querySelector('.selected-color');
@@ -125,4 +176,21 @@ const notifyUser = () => {
     toastNotification('Please select a size!');
     return;
   }
+
+  displayOverlayAndMiniCart();
+
+  // submitting the data
+  submitData();
+};
+
+const hideOverlayAndMiniCart = () => {
+  document.querySelector('.overlay').classList.remove('show');
+  document.querySelector('aside.mini-cart').classList.remove('show');
+
+  cartCount.textContent = `(${shoppingList.length})`;
+};
+
+const displayOverlayAndMiniCart = () => {
+  document.querySelector('.overlay').classList.add('show');
+  document.querySelector('aside.mini-cart').classList.add('show');
 };

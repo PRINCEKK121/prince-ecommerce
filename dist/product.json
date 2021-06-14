@@ -5,27 +5,27 @@
     "ratings": 4,
     "numOfReviews": 74,
     "images": [
-      "product-image-1.jpg", 
-      "product-image-2.jpg",
-       "product-image-3.jpg",
-       "product-image-4.jpg"
+      "stone.jpg", 
+      "khaki.jpg",
+       "vineyard navy.jpg",
+       "jetty red.jpg"
     ],
     "price": 55,
     "colors": [
         {
-          "name": "vineyard navy",
+          "name": "stone",
           "hex": "#D8D5CE"
         },
         {
-          "name": "stone",
+          "name": "khaki",
           "hex": "#AD9C94"
         }, 
         {
-        "name": "khaki",
+        "name": "vineyard_navy",
         "hex": "#222439"
         },
         { 
-        "name": "jetty red",
+        "name": "jetty_red",
         "hex": "#E67675"
         }
     ],
