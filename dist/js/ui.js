@@ -114,7 +114,7 @@ const userSelections = (e) => {
     chooseColor.querySelector('.text').textContent = `Color: ${dataset.color.replace('_', ' ')}`;
 
     // changing the image displayed
-    productDetailsIntro.querySelector('img').src = `${location.origin}/dist/images/${dataset.color}.jpg`;
+    productDetailsIntro.querySelector('img').src = `/dist/images/${dataset.color}.jpg`;
     // displayImage.src(`images/${dataset.color}`)
   } else if (className === 'sizes') {
     chooseSize
