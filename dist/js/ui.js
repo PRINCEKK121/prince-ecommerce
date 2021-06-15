@@ -4,6 +4,7 @@ const shoppingList = localStorage.getItem('userData')
 
 const {
   productDetailsIntro,
+  productDetailsBody,
   productName,
   prodRatings,
   prodPrice,
@@ -21,6 +22,25 @@ const {
 } = domSelectors();
 
 const removeNotification = () => notify.classList.remove('show');
+
+const displayingRatingsOnLargerScreens = (name, ratings, numOfReviews) => {
+  productDetailsBody.insertAdjacentHTML('afterbegin', '<h1 class="prodName"></h1><p class="prodRatings"></p>');
+
+  let ratingsSection = '<span class="ratingsContainer">';
+
+  document.querySelector('.prodName').textContent = name;
+
+  for (let i = 0; i < ratings; i++) {
+    ratingsSection += '<i class="fas fa-star"></i>';
+
+    if (i === ratings - 1)
+      ratingsSection += `
+      </span> ${numOfReviews} Reviews
+    `;
+  }
+
+  document.querySelector('.prodRatings').innerHTML = ratingsSection;
+}
 
 const generateProductIntro = ({ name, ratings, numOfReviews }) => {
   cartCount.textContent = `(${shoppingList.length})`;
@@ -41,8 +61,10 @@ const generateProductIntro = ({ name, ratings, numOfReviews }) => {
   prodRatings.innerHTML = ratingsSection;
 };
 
-const generateProductDetails = ({ price, colors, sizes }) => {
+const generateProductDetails = ({ name, numOfReviews, ratings, price, colors, sizes }) => {
   const { prodPrice, colorChoices, sizeChoices } = domSelectors();
+console.log(name);
+  displayingRatingsOnLargerScreens(name, ratings, numOfReviews);
 
   prodPrice.textContent = `$ ${price.toFixed(2)}`;
 
@@ -154,9 +176,9 @@ const populateMiniCart = ({
 }) => {
   
   itemImage.setAttribute("style", 
-    `background: url(images/${img}.jpg) no-repeat center center/cover; margin-right: 2rem; border-radius: 0.5rem;`);
-  name.textContent = itemName;
-  itemColor.textContent = `${colorSelected} /`;
+    `background: url(images/${img}.jpg) no-repeat center center/cover; margin-right: 2rem; border-radius: 0.5rem; width: 70%`);
+  itemName.textContent = name;
+  itemColor.textContent = `${colorSelected.replace('_', ' ')} /`;
   itemSize.textContent = sizeSelected;
   itemQuantity.textContent = qty;
   itemPrice.textContent = `$ ${price.toFixed(2)}`;

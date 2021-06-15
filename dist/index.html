@@ -11,17 +11,18 @@
       href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
     />
 
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/media_query.css" />
 
     <title>Document</title>
   </head>
   <body>
     <header>
-      <a href="cart.html"
-        ><span class="cart-count">
+      <a href="cart.html">
+        <span class="cart-count">
           <i class="fas fa-shopping-bag"></i> <span class="count">(0)</span>
-        </span></a
-      >
+        </span>
+      </a>
     </header>
 
     <main>
@@ -32,122 +33,118 @@
         <a href="#">Boys <i class="fas fa-angle-right"></i></a>
       </nav>
 
-      <section id="product-details-intro">
-        <h1></h1>
-        <p></p>
-        <figure>
-          <img src="images/stone.jpg" alt="images of products" />
-        </figure>
-      </section>
-
-      <section id="product-details-body">
-        <p class="discount-info">
-          <span>Free Ground Shipping</span> on all orders over $125
-        </p>
-
-        <div class="product-details">
-          <p class="price"></p>
-
-          <div class="user-choice">
-            <div class="color-choice"></div>
-
-            <div class="size-choice">
-              <span class="text">Size:</span>
-            </div>
-          </div>
-
-          <form>
-            <div class="user-input">
-              <button class="btn decrease-quantity">
-                <i class="fas fa-minus"></i>
-              </button>
-              <input type="number" value="1"/>
-              <button class="btn increase-quantity">
-                <i class="fas fa-plus"></i>
-              </button>
-            </div>
-
-            <div class="add-to-cart">
-              <button type="submit" class="btn-block add-to-cart-btn">
-                Add to Bag
-              </button>
-
-              <a class="buy-online" href="/">
-                <span class="in-store"> Buy online, free in-store pickup </span>
-                <span class="near-store">
-                  Get it today at a store near you.
-                  <span class="choose-store">Choose store</span>
-                </span>
-              </a>
-            </div>
-          </form>
+      <div class="container">
+        <div class="container-head">
+          <section id="product-details-intro">
+            <h1></h1>
+            <p></p>
+            <figure>
+              <img src="images/stone.jpg" alt="images of products" />
+            </figure>
+          </section>
         </div>
-      </section>
 
-      <section id="payment-options">
-        <span class="shipping">
-          <i class="fas fa-truck-moving"></i>
-          <span>Same Day Delivery</span> -
-          <a href="#">Check Availability</a>
-        </span>
-
-        <div class="payment-card">
-          <figure class="img-container">
-            <img src="images/pay-paypal.png" alt="paypal pic" />
-            <img src="images/pay-amazon.png" alt="amazon pic" />
-            <img src="images/pay-applepay.png" alt="apple pic" />
-          </figure>
-
-          <p class="pay-installments">
-            or 4 payments of $13.00 by
-            <img
-              src="images/afterpay-lockup-blackonwhite.svg"
-              alt="afterpay logo "
-            />
-            <a href="#">?</a>
-          </p>
+        <div class="container-body">
+          <section id="product-details-body">
+            <p class="discount-info">
+              <span>Free Ground Shipping</span> on all orders over $125
+            </p>
+            <div class="product-details">
+              <p class="price"></p>
+              <div class="user-choice">
+                <div class="color-choice"></div>
+                <div class="size-choice">
+                  <span class="text">Size:</span>
+                </div>
+              </div>
+              <form>
+                <div class="user-input">
+                  <button class="btn decrease-quantity">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                  <input type="number" value="1" />
+                  <button class="btn increase-quantity">
+                    <i class="fas fa-plus"></i>
+                  </button>
+                </div>
+                <div class="add-to-cart">
+                  <button type="submit" class="btn-block add-to-cart-btn">
+                    Add to Bag
+                  </button>
+                  <a class="buy-online" href="/">
+                    <span class="in-store">
+                      Buy online, free in-store pickup
+                    </span>
+                    <span class="near-store">
+                      Get it today at a store near you.
+                      <span class="choose-store">Choose store</span>
+                    </span>
+                  </a>
+                </div>
+              </form>
+            </div>
+          </section>
+          <section id="payment-options">
+            <span class="shipping">
+              <i class="fas fa-truck-moving"></i>
+              <span>Same Day Delivery</span> -
+              <a href="#">Check Availability</a>
+            </span>
+            <div class="payment-card">
+              <figure class="img-container">
+                <img src="images/pay-paypal.png" alt="paypal pic" />
+                <img src="images/pay-amazon.png" alt="amazon pic" />
+                <img src="images/pay-applepay.png" alt="apple pic" />
+              </figure>
+              <p class="pay-installments">
+                or 4 payments of $13.00 by
+                <img
+                  src="images/afterpay-lockup-blackonwhite.svg"
+                  alt="afterpay logo "
+                />
+                <a href="#">?</a>
+              </p>
+            </div>
+          </section>
+          <section class="gift">
+            <a href="#"> <i class="fas fa-gift"></i> Gift Options </a>
+            <a href="#"> <i class="far fa-heart"></i> Add to Wishlist </a>
+          </section>
         </div>
-      </section>
-
-      <section class="gift">
-        <a href="#"> <i class="fas fa-gift"></i> Gift Options </a>
-
-        <a href="#"> <i class="far fa-heart"></i> Add to Wishlist </a>
-      </section>
-
-      <div class="notify-user"></div>
+      </div>
     </main>
+    <div class="notify-user"></div>
 
     <div class="overlay"></div>
-		<aside class="mini-cart">
-			<div class="head">Item added to Cart</div>
-			<div class="body">	
-					<div class="product-item-wrap">
-            <div class="img"></div>
-            <div class="wrapper">
-              <h3 class="item-name">Boys' Breaker Pants</h3>
-              <h3 class="item-price">$ 98.50</h3>
-              <div class="info">
-                <span class="item-color">Red</span>
-                <span class="item-size">3T</span>
-              </div>
-              <div class="quantity">
-                Quantity:
-                <span class="item-quantity">4</span>
-              </div>
+    <aside class="mini-cart">
+      <div class="head">Item added to Cart</div>
+      <div class="body">
+        <div class="product-item-wrap">
+          <div class="img"></div>
+          <div class="wrapper">
+            <h3 class="item-name"></h3>
+            <h3 class="item-price"></h3>
+            <div class="info">
+              <span class="item-color"></span>
+              <span class="item-size">3T</span>
+            </div>
+            <div class="quantity">
+              Quantity:
+              <span class="item-quantity">4</span>
             </div>
           </div>
-				
-				<div class="info">
-					CART SUBTOTAL:
-					<span class="product-total-price"></span>
-				</div>
-				<div class="button-set" >
-					<a href="cart.html" class="cart-btn">Checkout</a>
-					<button class="cart-btn close-cart">Continue shopping</button>
-				</div>
-			</div>
-		</aside>
+        </div>
+
+        <div class="info">
+          CART SUBTOTAL:
+          <span class="product-total-price"></span>
+        </div>
+        <div class="button-set">
+          <a href="cart.html" class="cart-btn">Checkout</a>
+          <button class="cart-btn close-cart">Continue shopping</button>
+        </div>
+      </div>
+    </aside>
 
     <script src="js/app.js"></script>
     <script src="js/querySelector.js"></script>

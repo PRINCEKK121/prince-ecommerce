@@ -1,7 +1,7 @@
 /******************
   google fonts 
  ******************/
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;700&display=swap');
 
 /************************************ 
   removing all the margins and paddings 
@@ -94,6 +94,11 @@ main nav a:hover {
 
 #product-details-intro h1 {
   font-size: 3rem;
+  color: var(--primary-color);
+}
+
+.color-choice {
+  text-transform: capitalize;
 }
 
 #product-details-intro p {
@@ -125,6 +130,11 @@ main nav a:hover {
 ***********************************/
 #product-details-body {
   font-size: 1.2rem;
+}
+
+.prodName,
+.prodRatings {
+  display: none;
 }
 
 .discount-info {
@@ -175,20 +185,20 @@ main nav a:hover {
   display: block;
 }
 
-.size-choice .sizes {
-  display: inline-block;
-  cursor: pointer;
-  margin-right: 0.5rem;
-}
-
 .size-choice {
   width: 70%;
   margin: auto;
 }
+
 .size-choice .sizes {
+  display: inline-block;
+  text-align: center;
+  width: 4rem;
+  cursor: pointer;
   margin-bottom: 1rem;
   font-size: 1.1rem;
-  padding: 1.5rem;
+  padding: 1rem;
+  margin-right: 0.5rem;
   color: #717171;
   background: #f7f7f7;
 }
@@ -242,6 +252,7 @@ input::-webkit-inner-spin-button {
 input[type='number'] {
   -moz-appearance: textfield;
 }
+
 .user-input input[type='number'] {
   display: inline-block;
   margin: 0 0.7rem;
@@ -327,6 +338,10 @@ input[type='number'] {
   margin-top: 2.5rem;
 }
 
+.pay-installments {
+  margin-top: 2rem;
+}
+
 .img-container {
   display: flex;
   justify-content: center;
@@ -390,7 +405,7 @@ input[type='number'] {
   right: -25rem;
   background-color: #dd3535;
   color: #fff;
-  padding: 2rem ;
+  padding: 2rem;
   text-align: left;
   font-size: 1.5rem;
   border-radius: 0.5rem;
@@ -425,7 +440,7 @@ input[type='number'] {
   background: #fff;
   font-size: 1.8rem;
   top: 0;
-  overflow: scroll; 
+  overflow: scroll;
   right: -40rem;
   height: 100%;
   transition: right 300ms ease-in-out;
@@ -445,7 +460,7 @@ input[type='number'] {
 }
 
 .mini-cart .body {
-  padding: 2rem 5rem; 
+  padding: 2rem 5rem;
   display: flex;
   flex-direction: column;
 }
@@ -460,7 +475,7 @@ input[type='number'] {
 }
 
 .mini-cart .wrapper {
-  font-size: 2rem;
+  font-size: 1.4rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -473,13 +488,17 @@ input[type='number'] {
 
 .mini-cart .quantity {
   position: relative;
-  bottom: 1.5rem;
+  bottom: 1rem;
 }
 
 .mini-cart .body > .info {
   display: flex;
   justify-content: space-between;
   color: var(--primary-color);
+}
+
+.item-color {
+  text-transform: capitalize;
 }
 
 .mini-cart .info .product-total-price {
@@ -516,3 +535,4 @@ input[type='number'] {
   color: var(--primary-color);
   border: 0.1rem solid;
 }
+

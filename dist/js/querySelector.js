@@ -6,8 +6,9 @@ const domSelectors = () => {
 
   return {
     productDetailsIntro,
+    productDetailsBody,
     cartCount: document.querySelector('.count'),
-    productName: productDetailsIntro.querySelector('h1'),
+    productName: document.querySelector('h1'),
     prodRatings: productDetailsIntro.querySelector('p'),
     prodPrice: productDetailsBody.querySelector('.product-details .price'),
     colorChoices: userChoices.querySelector('.color-choice'),
